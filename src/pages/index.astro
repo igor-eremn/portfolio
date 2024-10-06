@@ -1,5 +1,6 @@
 ---
 import SocialList from "@/components/SocialList.astro";
+import TechnoList from "@/components/TechnoList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
@@ -10,44 +11,29 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 const cactusTech: { desc: string; href: string; title: string }[] = [
 	{
-		desc: "Build fast websites, faster.",
-		href: "https://astro.build",
-		title: "Astro",
+		desc: "Fitness website that allows you to find the proper exercise for your training. With the help of great number of exercises, videos and recommendations, everyone can achieve their fitness goals easily.",
+		href: "https://gym-enjoyer.netlify.app/",
+		title: "GymEnjoyer",
 	},
 	{
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-		title: "Tailwind CSS",
+		desc: "E-commerce website specialized in electronic devices, offering a wide range of categories and products. Users can easily find and purchase the best gadgets to meet their needs.",
+		href: "https://github.com/igor-eremn/online-store-site",
+		title: "TechnoGood",
 	},
 	{
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-		title: "Markdown",
+		desc: "Real-time chat application where users can register, join various chat rooms, stay connected and exchange messages in real time.",
+		href: "https://github.com/igor-eremn/real-time-chat",
+		title: "TalkSphere",
 	},
 	{
-		desc: "Markdown for the component era.",
+		desc: "FoodFinder is a website designed to help users track nearby restaurants or find new places in any location. With options to add restaurants to your favorites and discover new spots, it connects food lovers with their favorite places and makes dining out easier.",
 		href: "https://mdxjs.com/",
-		title: "MDX",
+		title: "FoodFinder",
 	},
 	{
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-		title: "Satori",
-	},
-	{
-		desc: "A fully static search library.",
-		href: "https://pagefind.app/",
-		title: "Pagefind",
-	},
-	{
-		desc: "An easy to use Icon component for Astro.",
-		href: "https://github.com/natemoo-re/astro-icon#readme",
-		title: "Astro Icon",
-	},
-	{
-		desc: "Highly customisable source code & syntax highlighter",
-		href: "https://expressive-code.com/",
-		title: "Expressive Code",
+		desc: "History Tok is a React Native application featuring an infinite scroll of American history questions in a TikTok-like format.",
+		href: "https://mdxjs.com/",
+		title: "HistoryTok",
 	},
 ];
 ---
@@ -56,13 +42,24 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	<section>
 		<h1 class="title mb-6">Hello World!</h1>
 		<p class="mb-4">
-			I am a full-stack developer with 2 years of experience, specializing in the MERN stack 
-			I hold a Bachelor's degree in Computer Science and have a solid foundation in both front-end 
-			and back-end development. I am eligible to work in Canada and am open to relocation, 
-			bringing adaptability to any project or team I join.
+			I am a <a class="cactus-link">full-stack developer</a> with 2 years of experience, with a 
+			<a class="cactus-link">MERN stack</a> focus. I hold a Bachelor's degree in Computer Science 
+			and have a solid foundation in both front-end and back-end development.
+		</p>
+		<p class="mb-4">
+			I am <a class="cactus-link">eligible to work</a> in Canada. Currently based in Vancouver, BC, 
+			I am open to relocation, offering a collaborative mindset to every team I work with.
 		</p>
 		<SocialList />
 	</section>
+
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">Tech Stack</h2>
+		<dl class="space-y-4">
+			<TechnoList/>
+		</dl>
+	</section>
+
 	{/*
 	<section aria-label="Blog post list" class="mt-16">
 		<h2 class="title mb-4 text-xl">Posts</h2>
@@ -76,11 +73,10 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 				))
 			}
 		</ul>
-	</section>
-	*/}
-	{/*
+	</section>*/}
+	
 	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
+		<h2 class="title mb-4 text-xl">Personal Projects</h2>
 		<dl class="space-y-4">
 			{
 				cactusTech.map(({ desc, href, title }) => (
@@ -99,5 +95,5 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 			}
 		</dl>
 	</section>
-	*/}
+	
 </PageLayout>
