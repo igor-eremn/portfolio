@@ -97,6 +97,7 @@ export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
 	site: "https://igor-eremn.github.io",
 	vite: {
+		base: "/portfolio/",
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},
