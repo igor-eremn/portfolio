@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://igor-eremn.github.io/sitemap-index.xml

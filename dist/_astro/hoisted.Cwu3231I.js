@@ -1,0 +1,1 @@
+function s(t,e){t.classList.toggle(e)}class l extends HTMLElement{#e=!1;connectedCallback(){const e=document.getElementById("main-header"),n=this.querySelector("button");n?.addEventListener("click",()=>{e&&s(e,"menu-open"),this.#e=!this.#e,n.setAttribute("aria-expanded",this.#e.toString())})}}customElements.define("mobile-button",l);
