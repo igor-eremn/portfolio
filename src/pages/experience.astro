@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import aboutImg from "@/assets/about-astro.png";
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "Experience",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Experience</h1>
+		<h2 class="title text-lg"><a class="min-w-[120px] text-gray-600 dark:text-gray-400">2022-23</a> Web Developer - SKYTRAC</h2>
+		<ul class="list-inside list-disc">
+			<li>Developed responsive web applications using React.js.</li>
+			<li>Built RESTful APIs with Node.js and Express, improving data flow.</li>
+			<li>Worked on optimizing MongoDB as a backend database.</li>
+			<li>Optimized front-end performance, reducing page load times.</li>
+			<li>Enhanced data storage efficiency, resulting in better scalability.</li>
+		</ul>
+		<h2 class="title text-lg"><a class="min-w-[120px] text-gray-600 dark:text-gray-400">2020-21</a> Front End Developer - Magnetic Elements</h2>
+		<ul class="list-inside list-disc">
+			<li>Developed and maintained an online store.</li>
+			<li>Took care of user frinedly interface and smooth experience.</li>
+			<li>Improved the website’s overall structure and usability.</li>
+			<li>Implemented dynamic features and responsive designs.</li>
+			<li>Collaborated with team members to optimize the website's performance.</li>
+		</ul>
+		<h2 class="title text-lg"><a class="min-w-[120px] text-gray-600 dark:text-gray-400">2019-20</a> IT Technician - Apple</h2>
+		<ul class="list-inside list-disc">
+			<li>Provided technical support, achieving a 95% customer satisfaction rate.</li>
+			<li>Optimized internal IT processes, reducing average resolution time.</li>
+			<li>Due to great performance, got promoted to T2 qualification.</li>
+		</ul>
+	</div>
+</PageLayout>
