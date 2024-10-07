@@ -23,6 +23,7 @@ jobs:
           path: .  # The root location of your Astro project inside the repository.
           node-version: 20  # Specify the Node.js version you want to use.
           package-manager: pnpm@latest  # Specify the version of pnpm.
+          dest: ~/setup-pnpm
 
   deploy:
     needs: build
