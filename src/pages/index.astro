@@ -27,13 +27,31 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	},
 	{
 		desc: "FoodFinder is a website designed to help users track nearby restaurants or find new places in any location. With options to add restaurants to your favorites and discover new spots, it connects food lovers with their favorite places and makes dining out easier.",
-		href: "https://mdxjs.com/",
+		href: "https://github.com/igor-eremn",
 		title: "FoodFinder",
 	},
 	{
 		desc: "History Tok is a React Native application featuring an infinite scroll of American history questions in a TikTok-like format.",
-		href: "https://mdxjs.com/",
+		href: "https://github.com/igor-eremn/learn-tok",
 		title: "HistoryTok",
+	},
+];
+
+const workExperience: { title: string; company: string; time: string;  }[] = [
+	{
+		title: "Web Developer",
+		company: "SKYTRAC Systems",
+		time: "May 2022 - May 2023",
+	},
+	{
+		title: "Front End Dev",
+		company: "Magnetic Elements",
+		time: "May 2020 - Aug 2021",
+	},
+	{
+		title: "IT Technician",
+		company: "Apple - CNX",
+		time: "Jun 2019 - Apr 2020",
 	},
 ];
 ---
@@ -60,8 +78,8 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 		</dl>
 	</section>
 
-	{/*
-	<section aria-label="Blog post list" class="mt-16">
+	
+	{/*<section aria-label="Blog post list" class="mt-16">
 		<h2 class="title mb-4 text-xl">Posts</h2>
 		<ul class="space-y-4">
 			{
@@ -75,6 +93,40 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 		</ul>
 	</section>*/}
 	
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">Experience</h2>
+		<dl class="space-y-4">
+			{
+				workExperience.map(({ title, company, time }) => (
+					<div class="flex flex-col gap-3 sm:flex-row">
+						<dt>
+							<span class="flex">
+								<a class="cactus-link" rel="noreferrer">
+									{title}
+								</a>
+								:
+							</span>
+						</dt>
+						<dt>
+							<span class="flex">
+								<a rel="noreferrer">
+									{time}
+								</a>
+							</span>
+						</dt>
+						<dt>
+							<span class="flex ">
+								<arel="noreferrer">
+									{company}
+								</arel=>
+							</span>
+						</dt>
+					</div>
+				))
+			}
+		</dl>
+	</section>
+
 	<section class="mt-16">
 		<h2 class="title mb-4 text-xl">Personal Projects</h2>
 		<dl class="space-y-4">

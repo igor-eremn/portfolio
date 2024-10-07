@@ -28,6 +28,11 @@ const socialLinks: {
 		name: "mdi:resume",
 	},
 	{
+		friendlyName: "Mail",
+		link: "mailto:igr.eremn@.com",
+		name: "mdi:mail",
+	},
+	{
 		friendlyName: "Leetcode",
 		link: "https://leetcode.com/u/igor-eremn/",
 		name: "mdi:code",
@@ -36,7 +41,7 @@ const socialLinks: {
 ---
 
 <div class="flex flex-wrap items-end gap-x-2">
-	<p>Find me on</p>
+	<p>About me</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
