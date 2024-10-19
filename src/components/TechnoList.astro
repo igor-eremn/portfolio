@@ -22,10 +22,15 @@ const socialLinks: {
 		name: "mdi:language-javascript",
 		color: "hover:text-yellow-500",
 	},
-    {
-		friendlyName: "NodeJS",
-		name: "mdi:nodejs",
-		color: "hover:text-green-600",
+	{
+		friendlyName: "Java",
+		name: "mdi:language-java",
+		color: "hover:text-red-600",
+	},
+	{
+		friendlyName: "Python",
+		name: "mdi:language-python",
+		color: "hover:text-blue-500",
 	},
     {
 		friendlyName: "Tailwind",
@@ -37,10 +42,30 @@ const socialLinks: {
 		name: "mdi:material-ui",
 		color: "hover:text-blue-800",
 	},
+	{
+		friendlyName: "API",
+		name: "mdi:api",
+		color: "hover:text-gray-600",
+	},
+	{
+		friendlyName: "NodeJS",
+		name: "mdi:nodejs",
+		color: "hover:text-green-600",
+	},
     {
 		friendlyName: "React",
 		name: "mdi:react",
 		color: "hover:text-blue-400",
+	},
+	{
+		friendlyName: "VueJS",
+		name: "mdi:vuejs",
+		color: "hover:text-green-500",
+	},
+	{
+		friendlyName: ".NET",
+		name: "mdi:dot-net",
+		color: "hover:text-purple-600",
 	},
     {
 		friendlyName: "Jira",
@@ -57,20 +82,10 @@ const socialLinks: {
 		name: "mdi:database",
 		color: "hover:text-gray-600",
 	},
-    {
-		friendlyName: "Python",
-		name: "mdi:language-python",
-		color: "hover:text-blue-500",
-	},
-    {
-		friendlyName: "VueJS",
-		name: "mdi:vuejs",
-		color: "hover:text-green-500",
-	},
-    {
-		friendlyName: "Java",
-		name: "mdi:language-java",
-		color: "hover:text-red-600",
+	{
+		friendlyName: "Firebase",
+		name: "mdi:firebase",
+		color: "hover:text-orange-400",
 	},
     {
 		friendlyName: "GraphQL",
@@ -85,7 +100,14 @@ const socialLinks: {
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, name, color }) => (
-				<li class="flex">
+				<li 
+					class={`flex ${friendlyName === "Java" || 
+									friendlyName === ".NET" || 
+										friendlyName === "GraphQL" || 
+											friendlyName === "Material UI" || 
+												friendlyName === "Jira" ? 'hidden sm:flex' : ''}`}
+				>
+
 					<a
 						class={`inline-block sm:hover: ${color}`}
 						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
