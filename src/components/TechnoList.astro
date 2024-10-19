@@ -96,10 +96,43 @@ const socialLinks: {
 
 ---
 
+<style lang="css">
+.rotate-in-diag-2 {
+	-webkit-animation: rotate-in-diag-2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: rotate-in-diag-2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes rotate-in-diag-2 {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, -360deg);
+    transform: rotate3d(-1, 1, 0, -360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+    transform: rotate3d(-1, 1, 0, 0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-in-diag-2 {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, -360deg);
+    transform: rotate3d(-1, 1, 0, -360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+    transform: rotate3d(-1, 1, 0, 0deg);
+    opacity: 1;
+  }
+}
+</style>
+
 <div class="flex flex-wrap items-end gap-x-2">
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
-			socialLinks.map(({ friendlyName, isWebmention, name, color }) => (
+			socialLinks.map(({ friendlyName, isWebmention, name, color }, index) => (
 				<li 
 					class={`flex ${friendlyName === "Java" || 
 									friendlyName === ".NET" || 
@@ -107,9 +140,9 @@ const socialLinks: {
 											friendlyName === "Material UI" || 
 												friendlyName === "Jira" ? 'hidden sm:flex' : ''}`}
 				>
-
 					<a
-						class={`inline-block sm:hover: ${color}`}
+						class={`inline-block sm:hover: ${color} rotate-in-diag-2`}
+						style={`animation-delay: ${index * 0.1}s;`}
 						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
 					>
 						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
